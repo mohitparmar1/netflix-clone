@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #0000;
+    color: #fff; 
+}
+.header{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(./images/header-image.png);
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+    position: relative;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+nav button{
+    border: 0;
+    outline: 0;
+    background-color: #db0001;
+    color: #fff;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.language-btn{
+    display: inline-flex;    
+    align-items: center;
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 7px 10px;
+}
+.language-btn img{
+    width: 10px;
+    margin-left: 10px;
+}
+
+.header-main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.header-main h1{
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: sans-serif;
+    text-align: center;
+    margin-bottom: 1.24rem;
+}
+.header-main h3{
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: sans-serif;
+    text-align: center;
+    margin-bottom: 1.24em;
+}
+
+.header-main p{
+    font-size: 1.25rem;
+    font-weight: 500;
+    font-family: sans-serif;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.email-signup{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    overflow: hidden;
+}
+.email-signup input{
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 0.5rem;
+}
+.email-signup button{
+    background-color: #db0001;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+/* ----------- Features-section -------------- */
+
+.bg-black{
+    background-color: #000;
+}
