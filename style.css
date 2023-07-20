@@ -2,9 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif ,'poppins';
 }
 body{
-    background-color: #0000;
+    background-color: #3f3d3d;
     color: #fff; 
 }
 .header{
@@ -89,9 +90,11 @@ nav button{
 }
 .email-signup input{
     flex: 1;
+    font-size: 18px;
     border: 0;
     outline: 0;
     margin-left: 0.5rem;
+    margin-right: 1rem;
 }
 .email-signup button{
     background-color: #db0001;
@@ -99,14 +102,56 @@ nav button{
     border: 0;
     outline: 0;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 22px;
     cursor: pointer;
+    margin-left: 1rem;
     font-weight: 600;
 }
 
 
 /* ----------- Features-section -------------- */
-
-.bg-black{
+.features{
+    padding: 1rem 1.5rem;
+    font-size: 22px;
     background-color: #000;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 2rem 2rem;
+}
+.features h2{
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+}
+.text-col{
+    flex-basis: 50%;
+    padding: 0 3rem;
+    margin-bottom: 1rem;
+}
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 1rem;
+}
+.img-col img{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    opacity: 0.7;
+}
+
+.img-col:hover img{
+    opacity: 1;
+}
+.faqs{
+    margin: 0.5rem 0;
+    background-color: #000;
+}
+.faqs h2{
+    padding: 1rem 12%;
+    text-align: center;
+    font-size: 3rem;
 }
