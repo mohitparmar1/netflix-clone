@@ -5,7 +5,7 @@
     font-family: sans-serif ,'poppins';
 }
 body{
-    background-color: #3f3d3d;
+    background-color: #303030;
     color: #fff; 
 }
 .header{
@@ -124,6 +124,7 @@ nav button{
     flex-wrap: wrap;
     width: 100%;
     padding: 2rem 2rem;
+    border-top: 5px solid #303030;
 }
 .features h2{
     font-size: 3rem;
@@ -150,11 +151,215 @@ nav button{
     opacity: 1;
 }
 .faqs{
-    margin: 0.5rem 0;
+    margin: 0.25rem 0;
     background-color: #000;
 }
 .faqs h2{
     padding: 1rem 12%;
     text-align: center;
     font-size: 3rem;
+}
+.accordion{
+    width: 100%;
+    margin: 2rem auto;
+    max-width: 750px;
+}
+.accordion li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #303030;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    position: relative;
+}
+label::after{
+    content: '+';
+    position: absolute;
+    right: 20px;
+    font-size: 35px;
+    font-weight: 700;
+    color: #fff;
+    transition: transform 0.3s;
+}
+input[type="radio"]{
+    display: none;
+}
+.accordion .content{
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+    transition: max-height 0.1s ease-in-out, padding 0.5s ease-in-out;
+}
+
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+small{
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
+.faqs .email-signup{
+    width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* -------------- Footer -------------- */
+.footer{
+    background-color: #000;
+    padding: 2rem 10%;
+}
+.footer h3{
+    color: rgba(255,255,255,0.7);
+}
+.footer .rows{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+.footer .rows .col{
+    flex: 1;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+.footer .rows .col a{
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 0.6rem;
+    display: block;
+}
+
+.footer .rows .col a:hover{
+    color: #fff;
+}
+.footer .language-btn{
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.7);
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+}
+.footer .copyright-text{
+    margin-top: 1.5rem;
+    font-size: 15px;
+    color: rgba(255,255,255,0.7);
+}
+
+/* -------------- Media Queries -------------- */
+/* Mobile devices */
+@media (max-width: 767px) {
+    .header-main h1 {
+        font-size: 2.5rem;
+    }
+    .header-main h3 {
+        font-size: 1.2rem;
+    }
+    .header-main p {
+        font-size: 1rem;
+    }
+    .email-signup {
+        width: 100%;
+    }
+    .email-signup input {
+        font-size: 16px;
+    }
+    .email-signup button {
+        font-size: 18px;
+    }
+    .features h2 {
+        font-size: 2.5rem;
+    }
+    .text-col, .img-col {
+        flex-basis: 100%;
+        padding: 0 1rem;
+    }
+    .img-col img {
+        width: 100%;
+    }
+    .accordion .content {
+        padding: 10px;
+    }
+    .footer .rows {
+        flex-direction: column;
+    }
+    .footer .rows .col {
+        flex: none;
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    .faqs .email-signup {
+        width: 100%;
+    }
+}
+
+/* Tablets and larger mobile devices */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .header-main h1 {
+        font-size: 2.7rem;
+    }
+    .header-main h3 {
+        font-size: 1.4rem;
+    }
+    .header-main p {
+        font-size: 1.1rem;
+    }
+    .features h2 {
+        font-size: 2.7rem;
+    }
+    .accordion .content {
+        padding: 15px;
+    }
+}
+
+/* Tablets and small desktops */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .header-main h1 {
+        font-size: 3rem;
+    }
+    .header-main h3 {
+        font-size: 1.5rem;
+    }
+    .header-main p {
+        font-size: 1.25rem;
+    }
+    .features h2 {
+        font-size: 3.2rem;
+    }
+}
+
+/* Large desktops and beyond */
+@media (min-width: 1200px) {
+    .header-main h1 {
+        font-size: 3.5rem;
+    }
+    .header-main h3 {
+        font-size: 1.7rem;
+    }
+    .header-main p {
+        font-size: 1.4rem;
+    }
+    .features h2 {
+        font-size: 3.5rem;
+    }
 }
